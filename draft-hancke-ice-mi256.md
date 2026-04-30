@@ -2,6 +2,7 @@
 title: "An ICE Option for MESSAGE-INTEGRITY-SHA256"
 abbrev: "ICE-MI256"
 category: info
+updates: 8445, 8863
 
 docname: draft-hancke-ice-mi256-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
@@ -60,7 +61,7 @@ However, ICE assumes a single MESSAGE-INTEGRITY algorithm (SHA-1) and
 does not provide a mechanism for hash agility.
 
 STUN defines a mechanism for hash agility and requires usages
-to define their own negotiation method as described in {{RFC8489, Section 16.3}}.
+to define their own negotiation method as described in Section 16.3 of {{RFC8489}}.
 
 This document updates ICE by defining an ICE option "mi256" that signals
 support for MESSAGE-INTEGRITY-SHA256 and specifies how it is used for
@@ -73,7 +74,7 @@ in {{!RFC8839}} which indiciates support for the comprehension-required
 MESSAGE-INTEGRITY-SHA256 STUN attribute.
 
 When the "mi256" ice-option is supported by both agents,
-any STUN message using short-term authentication
+all STUN transactions in the ICE session
 
 * MUST include the MESSAGE-INTEGRITY-SHA256 attribute and
 * MUST NOT include the MESSAGE-INTEGRITY attribute.
@@ -98,5 +99,7 @@ ICE Option name: `mi256`
 
 Description: The ICE option indicates that the ICE agent supports the
   MESSAGE-INTEGRITY-SHA256 STUN attribute.
+
+Reference: RFC XXXX
 
 --- back
