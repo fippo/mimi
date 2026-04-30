@@ -1208,10 +1208,8 @@ appear in all capitals, as shown here.<a href="#section-1-1" class="pilcrow">¶<
 <span>[<a href="#RFC8489" class="cite xref">RFC8489</a>]</span> with short-term credentials for connectivity checks.
 However, ICE assumes a single MESSAGE-INTEGRITY algorithm (SHA-1) and
 does not provide a mechanism for hash agility.<a href="#section-2-1" class="pilcrow">¶</a></p>
-<p id="section-2-2">STUN defines a mechanism for hash agility and explicitly allows usages
-to define their own negotiation method <span>[<a href="#RFC8489" class="cite xref">RFC8489</a>], <a href="https://rfc-editor.org/rfc/rfc8489#section-16.3" class="relref">Section 16.3</a></span>.
-In particular, usages may define out-of-band or usage-specific
-mechanisms to select the integrity algorithm.<a href="#section-2-2" class="pilcrow">¶</a></p>
+<p id="section-2-2">STUN defines a mechanism for hash agility and requires usages
+to define their own negotiation method as described in <span>[<a href="#RFC8489" class="cite xref">RFC8489</a>], <a href="https://rfc-editor.org/rfc/rfc8489#section-16.3" class="relref">Section 16.3</a></span>.<a href="#section-2-2" class="pilcrow">¶</a></p>
 <p id="section-2-3">This document updates ICE by defining an ICE option "mi256" that signals
 support for MESSAGE-INTEGRITY-SHA256 and specifies how it is used for
 connectivity checks.<a href="#section-2-3" class="pilcrow">¶</a></p>

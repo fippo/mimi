@@ -93,10 +93,9 @@ Table of Contents
    However, ICE assumes a single MESSAGE-INTEGRITY algorithm (SHA-1) and
    does not provide a mechanism for hash agility.
 
-   STUN defines a mechanism for hash agility and explicitly allows
-   usages to define their own negotiation method [RFC8489],
-   Section 16.3.  In particular, usages may define out-of-band or usage-
-   specific mechanisms to select the integrity algorithm.
+   STUN defines a mechanism for hash agility and requires usages to
+   define their own negotiation method as described in [RFC8489],
+   Section 16.3.
 
    This document updates ICE by defining an ICE option "mi256" that
    signals support for MESSAGE-INTEGRITY-SHA256 and specifies how it is
