@@ -4,8 +4,9 @@
 
 Transport and Services Working Group                           P. Hancke
 Internet-Draft                                                          
-Intended status: Informational                                R. Shpount
-Expires: 1 November 2026                                   30 April 2026
+Updates: 8445, 8863 (if approved)                             R. Shpount
+Intended status: Informational                             30 April 2026
+Expires: 1 November 2026
 
 
                An ICE Option for MESSAGE-INTEGRITY-SHA256
@@ -94,8 +95,8 @@ Table of Contents
    does not provide a mechanism for hash agility.
 
    STUN defines a mechanism for hash agility and requires usages to
-   define their own negotiation method as described in [RFC8489],
-   Section 16.3.
+   define their own negotiation method as described in Section 16.3 of
+   [RFC8489].
 
    This document updates ICE by defining an ICE option "mi256" that
    signals support for MESSAGE-INTEGRITY-SHA256 and specifies how it is
@@ -107,8 +108,8 @@ Table of Contents
    procedures in [RFC8839] which indiciates support for the
    comprehension-required MESSAGE-INTEGRITY-SHA256 STUN attribute.
 
-   When the "mi256" ice-option is supported by both agents, any STUN
-   message using short-term authentication
+   When the "mi256" ice-option is supported by both agents, all STUN
+   transactions in the ICE session
 
    *  MUST include the MESSAGE-INTEGRITY-SHA256 attribute and
 
@@ -134,6 +135,8 @@ Table of Contents
 
    Description: The ICE option indicates that the ICE agent supports the
    MESSAGE-INTEGRITY-SHA256 STUN attribute.
+
+   Reference: RFC XXXX
 
 6.  Normative References
 
