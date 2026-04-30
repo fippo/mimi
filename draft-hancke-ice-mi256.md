@@ -9,19 +9,19 @@ number:
 date:
 consensus: true
 v: 3
-area: AREA
-workgroup: WG Working Group
+area: "Applications and Real-Time"
+workgroup: "Interactive Connectivity Establishment"
 keyword:
  - next generation
  - unicorn
  - sparkling distributed ledger
 venue:
-  group: WG
-  type: Working Group
-  mail: WG@example.com
-  arch: https://example.com/WG
-  github: USER/REPO
-  latest: https://example.com/LATEST
+  group: "Interactive Connectivity Establishment"
+  type: "Working Group"
+  mail: "ice@ietf.org"
+  arch: "https://mailarchive.ietf.org/arch/browse/ice/"
+  github: "fippo/mimi"
+  latest: "https://fippo.github.io/mimi/draft-hancke-ice-mi256.html"
 
 author:
  -
