@@ -81,6 +81,16 @@ all STUN transactions in the ICE session
 
 Truncation is not permitted.
 
+# Peer-reflexive candidates
+
+STUN Binding requests using MESSAGE-INTEGRITY-SHA256 for authentication
+can arrive at the offerer before the SDP answer containing the ice-options
+attribute.
+
+If the request verifies correctly using the expected ICE short term credential,
+the agent infers that the peer supports the "mi256" ICE option semantics for
+the current ICE session.
+
 # Security Considerations
 
 This document improves the security of ICE by enabling the use of
