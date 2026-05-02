@@ -5,8 +5,8 @@
 Transport and Services Working Group                           P. Hancke
 Internet-Draft                                                          
 Updates: 8445, 8863 (if approved)                             R. Shpount
-Intended status: Informational                             30 April 2026
-Expires: 1 November 2026
+Intended status: Informational                                2 May 2026
+Expires: 3 November 2026
 
 
                An ICE Option for MESSAGE-INTEGRITY-SHA256
@@ -52,7 +52,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 1 November 2026.
+   This Internet-Draft will expire on 3 November 2026.
 
 Copyright Notice
 
@@ -73,10 +73,11 @@ Table of Contents
    1.  Conventions and Definitions
    2.  Introduction
    3.  ICE Option
-   4.  Security Considerations
-   5.  IANA Considerations
-     5.1.  ICE Option Registration
-   6.  Normative References
+   4.  Peer-reflexive candidates
+   5.  Security Considerations
+   6.  IANA Considerations
+     6.1.  ICE Option Registration
+   7.  Normative References
    Authors' Addresses
 
 1.  Conventions and Definitions
@@ -117,16 +118,26 @@ Table of Contents
 
    Truncation is not permitted.
 
-4.  Security Considerations
+4.  Peer-reflexive candidates
+
+   STUN Binding requests using MESSAGE-INTEGRITY-SHA256 for
+   authentication can arrive at the offerer before the SDP answer
+   containing the ice-options attribute.
+
+   If the request verifies correctly using the expected ICE short term
+   credential, the agent infers that the peer supports the "mi256" ICE
+   option semantics for the current ICE session.
+
+5.  Security Considerations
 
    This document improves the security of ICE by enabling the use of
    SHA-256 instead of SHA-1 for message integrity.
 
-5.  IANA Considerations
+6.  IANA Considerations
 
    This document requests that IANA make the following registrations:
 
-5.1.  ICE Option Registration
+6.1.  ICE Option Registration
 
    IANA is requested to add the following value to the "Interactive
    Connectivity Establishment (ICE) Options" registry:
@@ -138,7 +149,7 @@ Table of Contents
 
    Reference: RFC XXXX
 
-6.  Normative References
+7.  Normative References
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
